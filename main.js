@@ -35,15 +35,21 @@ function showBooks() {
     });
   }
 
+  function removeBook(id) {
+    bookList = bookList.filter((book) => book.id !== String(id));
+    showBooks();
+    localStorage.setItem('books', JSON.stringify(bookList));
+  }
+
   const removeBookButton = document.querySelectorAll('.show-books-section button');
   removeBookButton.forEach((button) => {
     button.addEventListener('click', () => {
-      /* eslint-disable no-use-before-define */
       removeBook(button.className);
     });
   });
 }
-showBooks();
+
+document.addEventListener('DOMContentLoaded', () => { showBooks(); });
 
 function addBook(title, author) {
   bookList.push({
@@ -51,12 +57,6 @@ function addBook(title, author) {
     title,
     author,
   });
-  showBooks();
-  localStorage.setItem('books', JSON.stringify(bookList));
-}
-
-function removeBook(id) {
-  bookList = bookList.filter((book) => book.id !== String(id));
   showBooks();
   localStorage.setItem('books', JSON.stringify(bookList));
 }
