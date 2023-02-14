@@ -20,22 +20,20 @@ export default class BookList {
 
   showBooks() {
     const showBooksSection = document.querySelector('.show-books-section');
+    const booksTable = document.querySelector('.books-table');
     let bookRow = '';
 
     if (this.Books.length === 0) {
-      showBooksSection.innerHTML = '<h1>Awesome books</h1>';
+      showBooksSection.innerHTML = '<h1>Awesome books</h1> <table class="books-table"></table> <hr>';
     } else {
       this.Books.forEach((book) => {
         bookRow += `
-                  <p>${book.title}</p>
-                  <p>${book.author}</p>
-                  <button class="${book.id}">Remove</button>
-                  <hr>
+                  <tr>
+                    <td><p>"${book.title}" by ${book.author}</p></td>
+                    <td><button class="${book.id}">Remove</button></td>
+                  </tr>
               `;
-        showBooksSection.innerHTML = `
-                  <h1>Awesome books</h1>
-                  ${bookRow}
-              `;
+        booksTable.innerHTML = `${bookRow}`;
       });
     }
 
