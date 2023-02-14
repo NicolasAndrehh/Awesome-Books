@@ -24,13 +24,10 @@ export default class BookList {
     let bookRow = '';
 
     if (this.Books.length === 0) {
-      showBooksSection.innerHTML = '<h1>Awesome books</h1> <table class="books-table"></table>';
-      booksTable.classList.remove('show');
-      booksTable.classList.add('hide');
+      showBooksSection.innerHTML = '<h1>Awesome books</h1> <table class="books-table hide"></table>';
     } else {
-      booksTable.classList.remove('hide');
-      booksTable.classList.add('show');
       this.Books.forEach((book) => {
+        booksTable.classList.remove('hide');
         bookRow += `
                   <tr>
                     <td><p>"${book.title}" by ${book.author}</p></td>

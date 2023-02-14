@@ -17,10 +17,6 @@ h1 {
   display: none;
 }
 
-.show {
-  display: block;
-}
-
 /* Show books section */
 
 .show-books-section,
