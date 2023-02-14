@@ -4,6 +4,7 @@ import Book from './class/book.js';
 const bookList = new BookList();
 bookList.addBook(new Book('Black Clover', 'Yuki Tabata'));
 
+// Local Storage
 if (localStorage.getItem('books')) {
   bookList.localStorageBooks(JSON.parse(localStorage.getItem('books')));
 }
@@ -15,6 +16,7 @@ if (localStorage.getItem('inputTitle')) {
   document.querySelector('.author-input').value = localStorage.getItem('inputAuthor');
 }
 
+// Add book button event listener
 const addBookButton = document.querySelector('#add-book-button');
 addBookButton.addEventListener('click', (e) => {
   const title = document.querySelector('.title-input').value;
@@ -27,3 +29,5 @@ addBookButton.addEventListener('click', (e) => {
     localStorage.setItem('inputAuthor', author);
   }
 });
+
+//
