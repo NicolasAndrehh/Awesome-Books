@@ -13,6 +13,14 @@ h1 {
   font-size: 2.5rem;
 }
 
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
 /* Show books section */
 
 .show-books-section,
