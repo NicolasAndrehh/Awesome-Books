@@ -8,23 +8,45 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <nav id="navbar" class="navbar">
+            <h2>Awesome Books</h2>
+            <ul>
+                <li><a href="#" class="book-list-show">List</a></li>
+                <li><a href="#" class="add-book-show">Add new</a></li>
+                <li><a href="#" class="contact-show">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
         <section id="show-books-section" class="show-books-section">  
-            <h1>Awesome books</h1>
+            <h1>All awesome books</h1>
             <table class="books-table">
                 
             </table>
         </section>
-        <hr>
-        <section id="add-books-section" class="add-books-section">
+        <section id="add-books-section" class="add-books-section hide">
             <h2>Add a new book</h2>
             <form action="" class="add-books-form">
                 <input type="text" class="title-input" placeholder="Title" required>
                 <input type="text" class="author-input" placeholder="Author" required>
                 <input type="submit" id="add-book-button">
+                <span class="confirmation-message"></span>
             </form>
         </section>
+        <section id="contact-section" class="contact-section hide">
+            <h1>Contact information</h1>
+            <p>Do have any questions or you just want to say "Hello"?<br>You can reach out to me!</p>
+            <ul>
+                <li>My e-mail: nicolasolaya22@gmail.com</li>
+                <li>My phone number: +57 3022114855</li>
+                <li>My country: Colombia</li>
+            </ul>
+        </section>
     </main>
+    <footer class="footer">
+        <p>Copyright ...</p>
+    </footer>
     <script src="main.js" type="module"></script>
 </body>
 </html>
