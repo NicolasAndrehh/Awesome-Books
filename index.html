@@ -12,14 +12,14 @@
         <nav id="navbar" class="navbar">
             <h2>Awesome Books</h2>
             <ul>
-                <li><a href="#">List</a></li>
-                <li><a href="#">Add new</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#" class="book-list-show">List</a></li>
+                <li><a href="#" class="add-book-show">Add new</a></li>
+                <li><a href="#" class="contact-show">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="show-books-section" class="show-books-section hide">  
+        <section id="show-books-section" class="show-books-section">  
             <h1>All awesome books</h1>
             <table class="books-table">
                 
@@ -31,9 +31,10 @@
                 <input type="text" class="title-input" placeholder="Title" required>
                 <input type="text" class="author-input" placeholder="Author" required>
                 <input type="submit" id="add-book-button">
+                <span class="confirmation-message"></span>
             </form>
         </section>
-        <section id="contact-section" class="contact-section">
+        <section id="contact-section" class="contact-section hide">
             <h1>Contact information</h1>
             <p>Do have any questions or you just want to say "Hello"?<br>You can reach out to me!</p>
             <ul>
