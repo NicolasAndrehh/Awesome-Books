@@ -1,5 +1,6 @@
-import BookList from './class/bookList.js';
-import Book from './class/book.js';
+import BookList from './modules/bookList.js';
+import Book from './modules/book.js';
+import { DateTime } from './modules/luxon.js';
 
 const bookList = new BookList();
 bookList.addBook(new Book('Black Clover', 'Yuki Tabata'));
@@ -39,27 +40,27 @@ const showBooksSection = document.querySelector('.show-books-section');
 const addBooksSection = document.querySelector('.add-books-section');
 const contactSection = document.querySelector('.contact-section');
 
-function showBookListSection() {
+const showBookListSection = () => {
   addBooksSection.classList.add('hide');
   contactSection.classList.add('hide');
   showBooksSection.classList.remove('hide');
   confirmationMessage.innerHTML = '';
   cont = 1;
-}
+};
 
-function showAddBookSection() {
+const showAddBookSection = () => {
   contactSection.classList.add('hide');
   showBooksSection.classList.add('hide');
   addBooksSection.classList.remove('hide');
-}
+};
 
-function showContactSection() {
+const showContactSection = () => {
   addBooksSection.classList.add('hide');
   showBooksSection.classList.add('hide');
   contactSection.classList.remove('hide');
   confirmationMessage.innerHTML = '';
   cont = 1;
-}
+};
 
 const bookListShowButton = document.querySelector('.book-list-show');
 const addBookShowButton = document.querySelector('.add-book-show');
@@ -68,3 +69,11 @@ const contactShowButton = document.querySelector('.contact-show');
 bookListShowButton.addEventListener('click', showBookListSection);
 addBookShowButton.addEventListener('click', showAddBookSection);
 contactShowButton.addEventListener('click', showContactSection);
+
+// Display Date Time
+const currentDateHTML = document.querySelector('.current-date');
+
+setInterval(() => {
+  const now = DateTime.now().toLocaleString(DateTime.DATETIME_FULL_WITH_SECONDS);
+  currentDateHTML.innerHTML = now;
+}, 1000);

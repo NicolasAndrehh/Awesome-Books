@@ -66,6 +66,15 @@ h1 {
   text-shadow: -3px 3px 10px #e6ddc4;
 }
 
+/* Date time */
+
+.date-container .current-date {
+  color: #f0e9d2;
+  text-align: end;
+  margin-top: 1rem;
+  font-size: 1.15rem;
+}
+
 /* Show books section */
 
 .show-books-section,
