@@ -79,7 +79,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-[Awesome books - Live Demo](https://nicolasandrehh.github.io/Awesome-Books/)
+[Awesome books - Live Demo](https://nicolasandrehh.github.io/Awesome-Books-ES6/)
 
 <p align="right"><a href="#readme-top">Back to top</a></p>
 

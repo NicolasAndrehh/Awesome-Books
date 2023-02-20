@@ -3,22 +3,22 @@ export default class BookList {
     this.Books = [];
   }
 
-  addBook(book) {
+  addBook = (book) => {
     this.Books.push(book);
     this.showBooks();
   }
 
-  removeBook(id) {
+  removeBook = (id) => {
     this.Books = this.Books.filter((book) => book.id !== String(id));
     localStorage.setItem('books', JSON.stringify(this.getBooks()));
     this.showBooks();
   }
 
-  localStorageBooks(data) {
+  localStorageBooks = (data) => {
     this.Books = data;
   }
 
-  showBooks() {
+  showBooks = () => {
     const showBooksSection = document.querySelector('.show-books-section');
     const booksTable = document.querySelector('.books-table');
     let bookRow = '';
@@ -46,7 +46,5 @@ export default class BookList {
     });
   }
 
-  getBooks() {
-    return this.Books;
-  }
+  getBooks = () => this.Books
 }
