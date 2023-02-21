@@ -12,14 +12,11 @@ if (localStorage.getItem('books')) {
 
 document.addEventListener('DOMContentLoaded', () => bookList.showBooks());
 
-if (localStorage.getItem('inputTitle')) {
-  document.querySelector('.title-input').value = localStorage.getItem('inputTitle');
-  document.querySelector('.author-input').value = localStorage.getItem('inputAuthor');
-}
-
 // Add book button event listener
 const addBookButton = document.querySelector('#add-book-button');
 const confirmationMessage = document.querySelector('.confirmation-message');
+const authorInput = document.querySelector('.author-input');
+const titleInput = document.querySelector('.title-input');
 let cont = 1;
 addBookButton.addEventListener('click', (e) => {
   const title = document.querySelector('.title-input').value;
@@ -28,8 +25,8 @@ addBookButton.addEventListener('click', (e) => {
     e.preventDefault();
     bookList.addBook(new Book(title, author));
     localStorage.setItem('books', JSON.stringify(bookList.getBooks()));
-    localStorage.setItem('inputTitle', title);
-    localStorage.setItem('inputAuthor', author);
+    titleInput.value = '';
+    authorInput.value = '';
     confirmationMessage.innerHTML = `${cont} book(s) were added succesfully`;
     cont += 1;
   }

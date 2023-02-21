@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <h1><b>First Capstone Project</b></h1>
+  <h1><b>Awesome Books ES6</b></h1>
 
 </div>
 
@@ -32,10 +32,10 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Awesome books] <a name="about-project"></a>
+# 📖 [Awesome books ES6] <a name="about-project"></a>
 
 
-**[Awesome books]** is a simple website that displays a list of books and allows you to add and remove books from that list. UI created from a Medium-fidelity wireframe.
+**[Awesome books ES6]** is a simple website that displays a list of books and allows you to add and remove books from that list. UI created from a Medium-fidelity wireframe.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -107,7 +107,7 @@ Example command:
 Clone this repository to your desired folder:
 
 ```sh
-  git clone git@github.com:NicolasAndrehh/Awesome-Books.git
+  git clone git@github.com:NicolasAndrehh/Awesome-Books-ES6.git
 ```
 
 ### Install
