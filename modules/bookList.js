@@ -21,13 +21,15 @@ export default class BookList {
   showBooks = () => {
     const showBooksSection = document.querySelector('.show-books-section');
     const booksTable = document.querySelector('.books-table');
+    const tableContainer = document.querySelector('.table-container');
     let bookRow = '';
 
     if (this.Books.length === 0) {
-      showBooksSection.innerHTML = '<h1>Awesome books</h1> <table class="books-table hide"></table>';
+      showBooksSection.innerHTML = '<h1>Awesome books</h1> <div class="table-container hide"><table class="books-table hide"></table></div>';
     } else {
       this.Books.forEach((book) => {
         booksTable.classList.remove('hide');
+        tableContainer.classList.remove('hide');
         bookRow += `
                   <tr>
                     <td><p>"${book.title}" by ${book.author}</p></td>
